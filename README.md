@@ -13,34 +13,18 @@ static $bmlt_server = '';
 // Your root server url
 
 
-static $serviceBodyId = '';
+static $serviceBodyId = '';&nbsp;&nbsp;&nbsp;&nbsp;// this can be either a parent or child service body id
 
-// this can be either a parent or child service body id
+static $daysPassed = '60';&nbsp;&nbsp;&nbsp;&nbsp;// the amount of days back to look for edits
 
+static $dbServername = "";&nbsp;&nbsp;&nbsp;&nbsp;// database servername often times 127.0.0.1 or localhost is fine
 
-static $daysPassed = '60';
+static $dbUsername = "";&nbsp;&nbsp;&nbsp;&nbsp;// bmlt database username
 
-// the amount of days back to look for edits
+static $dbPassword = "";&nbsp;&nbsp;&nbsp;&nbsp;// bmlt database password
 
-
-static $dbServername = "";
-
-// database servername often times 127.0.0.1 or localhost is fine
-
-
-static $dbUsername = "";
-
-// bmlt database username
-
-
-static $dbPassword = "";
-
-// bmlt database password
-
-
-static $dbName = "";
-
-// bmlt database name
+static $dbName = "";&nbsp;&nbsp;&nbsp;&nbsp;// bmlt database name
+`
 
 # Changelog
 
