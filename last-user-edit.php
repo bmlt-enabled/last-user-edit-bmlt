@@ -1,5 +1,5 @@
 <?php
-include 'config_crna.php';
+include 'config.php';
 date_default_timezone_set($timeZone);
 
 $today = date("Y-m-d");
@@ -7,25 +7,31 @@ $dateMinus = date('Y-m-d', strtotime("-" . $daysPassed  . " days"));
 $url = file_get_contents($bmltServer. "/client_interface/json/?switcher=GetChanges&start_date=" .$dateMinus. "&end_date=" .$today. "&service_body_id=" .$serviceBodyId);
 $results = json_decode($url,true);
 
-try {
-    $conn = new PDO("mysql:host=$dbServerName;dbname=$dbName", $dbUserName, $dbPassword);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch(PDOException $e)
-{
-    echo "Connection failed: " . $e->getMessage();
+if (isset($usersArray)) {
+    $bmltUsers = array_map('trim',$usersArray);
 }
 
-$getUsers = $conn->prepare('SELECT * FROM `na_comdef_users` WHERE `user_level_tinyint` = 2');
-$getUsers->execute();
+else {
+    try {
+        $conn = new PDO("mysql:host=$dbServerName;dbname=$dbName", $dbUserName, $dbPassword);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
+    catch(PDOException $e)
+    {
+        echo "Connection failed: " . $e->getMessage();
+    }
 
-$result = $getUsers->fetchAll();
-$serviceBodyUsers = array();
-foreach ($result as $users) {
-    $serviceBodyUsers[] .= $users['name_string'];
+    $getUsers = $conn->prepare('SELECT * FROM `na_comdef_users` WHERE `user_level_tinyint` = 2');
+    $getUsers->execute();
+
+    $result = $getUsers->fetchAll();
+    $serviceBodyUsers = array();
+    foreach ($result as $users) {
+        $serviceBodyUsers[] .= $users['name_string'];
+    }
+    asort($serviceBodyUsers);
+    $bmltUsers = array_map('trim',$serviceBodyUsers);
 }
-asort($serviceBodyUsers);
-$bmltUsers = array_map('trim',$serviceBodyUsers);
 
 ?>
 
