@@ -9,21 +9,32 @@ This section describes how to install the plugin and get it working.
 edit the config.php file with the following variables and upload to your server. optionally could be run locally `php -f last-user-edit.php > last-user-edit.html`
 if trying to run locally you may need to add your ip address in cpanel to allow remote database connections.
 
-`
-static $bmlt_server = '';     // Your root server url
+static $bmlt_server = '';
+// Your root server url
 
-static $serviceBodyId = '';   // this can be either a parent or child service body id
 
-static $daysPassed = '60';    // the amount of days back to look for edits
+static $serviceBodyId = '';
+// this can be either a parent or child service body id
 
-static $dbServername = "";    // database servername often times 127.0.0.1 or localhost is fine
 
-static $dbUsername = "";      // bmlt database username
+static $daysPassed = '60';
+// the amount of days back to look for edits
 
-static $dbPassword = "";      // bmlt database password
 
-static $dbName = "";          // bmlt database name
-`
+static $dbServername = "";
+// database servername often times 127.0.0.1 or localhost is fine
+
+
+static $dbUsername = "";
+// bmlt database username
+
+
+static $dbPassword = "";
+// bmlt database password
+
+
+static $dbName = "";
+// bmlt database name
 
 # Changelog
 
