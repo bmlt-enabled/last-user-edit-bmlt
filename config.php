@@ -1,9 +1,12 @@
 <?php
 
-static $bmlt_server = '';
+static $bmltServer = '';
 static $serviceBodyId = '';
 static $daysPassed = '60';
-static $dbServername = '';
-static $dbUsername = '';
+static $timeZone = '';
+
+// BMLT Database config
+static $dbServerName = '';
+static $dbUserName = '';
 static $dbPassword = '';
 static $dbName = '';

@@ -12,13 +12,17 @@ if trying to run locally you may need to add your ip address in cpanel to allow 
 
 | config option              | value                                                          |
 |:---------------------------|:---------------------------------------------------------------|
-|static $bmlt_server = '';   | Your root server url                                           | 
+|static $bmltServer = '';   | Your root server url                                           | 
 |static $serviceBodyId = ''; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | this can be either a parent or child service body id           |
 |static $daysPassed = '60';  | the amount of days back to look for edits                      |
-|static $dbServername = "";  | database servername often times 127.0.0.1 or localhost is fine |
-|static $dbUsername = "";    | bmlt database username                                         |
+|static $timeZone = '';      | sets the timezone ex. America/New_York                         |
+|static $dbServerName = "";  | database servername often times 127.0.0.1 or localhost is fine |
+|static $dbUserName = "";    | bmlt database username                                         |
 |static $dbPassword = "";    | bmlt database password                                         |
 |static $dbName = "";        | bmlt database name                                             |
+
+A full list of supported timezones can be found 
+here http://php.net/manual/en/timezones.php
 
 
 # Changelog
