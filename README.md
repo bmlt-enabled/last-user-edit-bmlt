@@ -10,7 +10,7 @@ edit the config.php file with the following variables and upload to your server.
 if trying to run locally you may need to add your ip address in cpanel to allow remote database connections.
 
 
-|      config option         |                       value                             |
+|: config option             | value                                                   |
 |----------------------------|--------------------------------------------------------:|
 |static $bmlt_server = '';   |   // Your root server url                               | 
 |static $serviceBodyId = ''; | // this can be either a parent or child service body id |
