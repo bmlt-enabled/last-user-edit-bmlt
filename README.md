@@ -11,7 +11,7 @@ if trying to run locally you may need to add your ip address in cpanel to allow 
 
 
 | config option              | value                                                          |
-|:---------------------------|----------------------------------------------------------------|
+|:---------------------------|:---------------------------------------------------------------|
 |static $bmlt_server = '';   | Your root server url                                           | 
 |static $serviceBodyId = ''; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | this can be either a parent or child service body id           |
 |static $daysPassed = '60';  | the amount of days back to look for edits                      |
