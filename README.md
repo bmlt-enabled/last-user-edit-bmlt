@@ -9,8 +9,14 @@ This section describes how to install the plugin and get it working.
 edit the config.php file with the following variables and upload to your server. optionally could be run locally `php -f last-user-edit.php > last-user-edit.html`
 if trying to run locally you may need to add your ip address in cpanel to allow remote database connections.
 
-static $bmlt_server = '';
-// Your root server url
+
+|      config option         |                       value                             |
+|----------------------------|--------------------------------------------------------:|
+|static $bmlt_server = '';   |   // Your root server url                               | 
+|static $serviceBodyId = ''; | // this can be either a parent or child service body id |
+
+
+static $bmlt_server = '';&nbsp;&nbsp;&nbsp;&nbsp;// Your root server url
 
 
 static $serviceBodyId = '';&nbsp;&nbsp;&nbsp;&nbsp;// this can be either a parent or child service body id
